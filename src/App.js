@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import Feed from './components/Feed'
+import HeaderBar from './components/HeaderBar'
+import Sidebar from './components/SideBar'
+import { BluecubeProvider } from './BluecubeContext'
+import CategoryBar from './components/CategoryBar'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		// this ensures the whole app gets the state needed...say if we were to implement routing on the sidebar
+		<BluecubeProvider>
+			<div className='container'>
+				<nav className='sidebar'>
+					<Sidebar />
+				</nav>
+
+				<section className='content'>
+					<header className='header-bar'>
+						<HeaderBar />
+						<CategoryBar />
+					</header>
+
+					<main>
+						<Feed />
+					</main>
+				</section>
+			</div>
+		</BluecubeProvider>
+	)
 }
 
-export default App;
+export default App

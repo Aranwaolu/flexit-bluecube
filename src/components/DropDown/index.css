@@ -1,0 +1,90 @@
+.drop-down-list {
+	width: calc(100% - 20px);
+	margin: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	/* height: 60px; */
+	margin: 10px;
+	color: rgb(22, 22, 180);
+}
+
+.notification-list {
+	width: 260px;
+	background-color: white;
+	padding: 0;
+	border-radius: 5px;
+	position: absolute;
+	top: 100%;
+	right: 0%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0;
+
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.notification-list ul {
+	text-decoration: none;
+	padding: 0;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.hide {
+	transition: all 0.5s ease;
+	opacity: 0;
+}
+
+.show {
+	transition: all 0.5s ease;
+	transform: translateY(5px);
+	pointer-events: none;
+	opacity: 1;
+}
+
+.notification-item {
+	text-decoration: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 20px;
+}
+
+.notification-list li:not(:last-child) {
+	border-bottom: 1px solid #969696;
+}
+
+.notification-img {
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	object-fit: cover;
+	cursor: pointer;
+	margin: 0px;
+	/* margin-right: 10px; */
+}
+
+.notification-content {
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.notification-content > h4 {
+	margin: 0;
+	font-size: 13px;
+	font-weight: 500;
+}
+
+.notification-content > p {
+	margin: 0;
+	margin-top: 2px;
+	font-size: 10px;
+}
