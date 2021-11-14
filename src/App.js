@@ -10,9 +10,7 @@ function App() {
 		// this ensures the whole app gets the state needed...say if we were to implement routing on the sidebar
 		<BluecubeProvider>
 			<div className='container'>
-				<nav className='sidebar'>
-					<Sidebar />
-				</nav>
+				<Sidebar />
 
 				<section className='content'>
 					<header className='header-bar'>

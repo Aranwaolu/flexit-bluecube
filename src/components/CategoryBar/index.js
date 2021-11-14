@@ -3,7 +3,7 @@ import './index.css'
 const CategoryBar = () => {
 	return (
 		<div className='category'>
-			<select name='world' className='category-select'>
+			<select name='world' className='category-select first'>
 				<option value=''>World</option>
 				<option value='africa'>Africa</option>
 				<option value='america'>America</option>
@@ -38,7 +38,7 @@ const CategoryBar = () => {
 				<option value='lagos'>Lagos</option>
 				<option value='porthacourt'>Porthacourt</option>
 			</select>
-			<select name='profession' className='category-select'>
+			<select name='profession' className='category-select last'>
 				<option value=''>Profession</option>
 				<option value='doctor'>Doctor</option>
 				<option value='engineer'>Engineer</option>

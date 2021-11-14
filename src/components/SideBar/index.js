@@ -16,7 +16,7 @@ import useBluecube from '../../useBluecube'
 const Sidebar = () => {
 	const { isNavOpen, toggleNav } = useBluecube()
 	return (
-		<div>
+		<div className='sidebar'>
 			<div
 				class='hamburger'
 				onClick={() => {

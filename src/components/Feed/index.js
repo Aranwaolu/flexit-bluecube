@@ -6,7 +6,7 @@ import useBluecube from '../../useBluecube'
 import InfiniteScroll from 'react-infinite-scroll-component'
 
 const Feed = () => {
-	const { fetchMoreImages, photos } = useBluecube()
+	const { fetchMoreImages, photos, setIndex, removeIndex } = useBluecube()
 
 	return (
 		<div>
@@ -19,7 +19,19 @@ const Feed = () => {
 				<div className='feed'>
 					{photos.length > 0 &&
 						photos.map((photo, index) => {
-							return <PhotoCard key={photo.index} data={photo} />
+							return (
+								<div
+									className='card-container'
+									onMouseEnter={() => {
+										setIndex(index)
+									}}
+									onMouseLeave={() => {
+										removeIndex()
+									}}
+								>
+									<PhotoCard key={photo.index} data={photo} indexArr={index} />
+								</div>
+							)
 						})}
 				</div>
 			</InfiniteScroll>

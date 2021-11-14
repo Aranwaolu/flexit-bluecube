@@ -16,6 +16,14 @@ const useBluecube = () => {
 		setState((state) => ({ ...state, isNotificationIconClicked: !state.isNotificationIconClicked }))
 	}
 
+	const setIndex = (index) => {
+		setState((state) => ({ ...state, indexToHoverOver: index }))
+	}
+
+	const removeIndex = () => {
+		setState((state) => ({ ...state, indexToHoverOver: -1 }))
+	}
+
 	function handleChange(search_value) {
 		setState((state) => ({ ...state, query: search_value }))
 	}
@@ -42,6 +50,10 @@ const useBluecube = () => {
 		toggleClick,
 		toggleNav,
 		toggleNotificationIcon,
+
+		setIndex,
+		removeIndex,
+		indexToHoverOver: state.indexToHoverOver,
 	}
 }
 

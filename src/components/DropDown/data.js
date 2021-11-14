@@ -8,20 +8,20 @@ export const Data = [
 		img_url: profileImg,
 		title: 'Micheal liked you!',
 		time: 'About 20 minutes ago',
-		icon: <FontAwesomeIcon icon={faHeart} color={'#333'} />,
+		icon: <FontAwesomeIcon icon={faHeart} color={'#333'} style={{ fontSize: '18px', color: 'red' }} />,
 	},
 	{
 		id: 2,
 		img_url: profileImg,
 		title: 'Jack liked you!',
 		time: 'About 40 minutes',
-		icon: <FontAwesomeIcon icon={faHeart} />,
+		icon: <FontAwesomeIcon icon={faHeart} style={{ fontSize: '18px', color: 'red' }} />,
 	},
 	{
 		id: 3,
 		img_url: profileImg,
 		title: 'Martin commented on your photo!',
 		time: 'About 56 minutes ago',
-		icon: <FontAwesomeIcon icon={faComment} />,
+		icon: <FontAwesomeIcon icon={faComment} style={{ fontSize: '18px', color: 'turquoise' }} />,
 	},
 ]

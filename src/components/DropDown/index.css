@@ -88,3 +88,7 @@
 	margin-top: 2px;
 	font-size: 10px;
 }
+
+.notification-content > span {
+	font-size: 16px;
+}

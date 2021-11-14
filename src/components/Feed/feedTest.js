@@ -6,11 +6,11 @@ import useBluecube from '../../useBluecube'
 import InfiniteScroll from 'react-infinite-scroll-component'
 
 const FeedTest = () => {
-	const { fetchMoreImages, name, photos, testButton } = useBluecube()
+	const { fetchMoreImages, photos, togglePhotoCardDetailsView } = useBluecube()
 
 	return (
 		<div>
-			<button onClick={() => testButton()}>{name}</button>
+			<button onClick={() => console.log('button')}>name</button>
 
 			<InfiniteScroll
 				dataLength={photos.length}
@@ -21,7 +21,15 @@ const FeedTest = () => {
 				<div className='feed'>
 					{photos.length > 0 &&
 						photos.map((photo, index) => {
-							return <PhotoCard key={photo.id} data={photo} />
+							return (
+								<div
+									onMouseEnter={() => console.log('here', index)}
+									// onMouseLeave={() => togglePhotoCardDetailsView()}
+								>
+									{' '}
+									<PhotoCard key={photo.id} data={photo} />{' '}
+								</div>
+							)
 						})}
 				</div>
 			</InfiniteScroll>

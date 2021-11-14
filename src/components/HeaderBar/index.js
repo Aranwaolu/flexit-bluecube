@@ -8,7 +8,7 @@ import { faBell, faCaretDown, faCaretUp, faSearch } from '@fortawesome/free-soli
 import DropDownBar from '../DropDown'
 
 const HeaderBar = () => {
-	const { handleChange, handleSubmit, isProfileNameClicked, query, toggleClick, toggleNotificationIcon } =
+	const { handleChange, handleSubmit, isProfileNameClicked, toggleClick, toggleNotificationIcon } =
 		useBluecube()
 
 	return (

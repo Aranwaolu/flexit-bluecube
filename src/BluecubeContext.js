@@ -13,6 +13,7 @@ const BluecubeProvider = (props) => {
 		isNavOpen: false,
 		isProfileNameClicked: false,
 		loading: false,
+		indexToHoverOver: -1,
 	})
 
 	useEffect(() => {
@@ -72,7 +73,7 @@ const BluecubeProvider = (props) => {
 	// note that doing that would cause re-fetching and most likely changing the content...not updating it
 	// we would want to do an update instead, where more images are fetched on scroll... so probably another useEffect to handle that
 
-	console.log(state)
+	// console.log(state)
 
 	return <BluecubeContext.Provider value={[state, setState]}>{props.children}</BluecubeContext.Provider>
 }
