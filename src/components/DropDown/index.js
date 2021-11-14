@@ -8,7 +8,7 @@ const DropDownBar = () => {
 	const { isNotificationIconClicked } = useBluecube()
 
 	return (
-		<div className={isNotificationIconClicked ? 'notification-list show' : 'notification-list hide'}>
+		<div className={isNotificationIconClicked ? 'notification-list' : 'notification-list hide'}>
 			<ul>
 				{Data.map((item) => {
 					return (

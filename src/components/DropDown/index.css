@@ -26,6 +26,13 @@
 	margin: 0;
 
 	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	z-index: 200;
+	transition: all 0.5s ease;
+	transform: translateY(5px);
+}
+
+.hide {
+	display: none;
 }
 
 .notification-list ul {
@@ -33,18 +40,6 @@
 	padding: 0;
 	margin: 0 auto;
 	width: 100%;
-}
-
-.hide {
-	transition: all 0.5s ease;
-	opacity: 0;
-}
-
-.show {
-	transition: all 0.5s ease;
-	transform: translateY(5px);
-	pointer-events: none;
-	opacity: 1;
 }
 
 .notification-item {

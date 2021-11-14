@@ -75,6 +75,7 @@
 	align-items: center;
 	border: none;
 	outline: none;
+	cursor: pointer;
 
 	background-color: transparent;
 	border-radius: 50%;
@@ -95,6 +96,8 @@
 	border: none;
 	outline: none;
 	border-radius: 50%;
+	cursor: pointer;
+	pointer-events: none;
 }
 
 .profile-image {
